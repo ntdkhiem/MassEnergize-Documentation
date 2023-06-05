@@ -20,10 +20,20 @@ const sidebars = {
       type: 'category',
       label: 'Endpoints',
       items: [
-        'api/action-routes',
-        'api/admin-routes',
-        'api/auth-routes',
-        'api/communities-routes'
+        'api/actions',
+        'api/admin',
+        'api/auth',
+        'api/communities',
+        'api/device-profile',
+        'api/downloads',
+        'api/events',
+        'api/feature-flags',
+        'api/goals',
+        'api/graphs',
+        'api/media-library',
+        'api/messages',
+        'api/misc',
+
       ]
     }
   ],
