@@ -1,0 +1,76 @@
+---
+title: Actions
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Actions
+
+This page contains all routes related to general actions for all users.
+
+## Routes
+
+### /actions.info
+
+- Required: `id:str`
+
+Get action's information from given `id`.
+
+### /actions.create
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `title:str`
+- Optional: `community_id:int`, `calculator_action:int`, `image:str_list`, `rank:int`, `is_global:bool`, `is_published:bool`, `is_approved:bool`, `tags:list`, `vendors:list`
+
+### /actions.add, /actions.submit
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `title:str`, `community_id:int`
+- Optional: `image:file`, `vendors:list`, `action_id:str`
+Same as create, except this is for user submitted actions.
+
+### /actions.list
+- Optional: `community_id:int`, `subdomain:str`
+:::caution
+You must supply either `community_id` or `subdomain` else the return value will be an empty array.
+:::
+List all actions from a community.
+
+### /actions.update
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `action_id:int`
+- Optional: `title:str`, `calculator_action:int`, `image:str_list`, `rank:int`, `is_global:bool`, `is_approved:bool`, `is_published:bool`, `tags:list`, `vendors:list`
+
+### /actions.delete, /actions.remove
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `action_id:int`
+
+### /actions.rank
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `id:int`, `rank:int`
+
+### /actions.copy
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `action_id:int`
+
+### /actions.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:int`, `action_ids:list`
+
+### /actions.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Optional: `community_id:int`, `action_ids:list`
