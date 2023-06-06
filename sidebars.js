@@ -33,9 +33,9 @@ const sidebars = {
         'api/media-library',
         'api/messages',
         'api/misc',
-
       ]
-    }
+    },
+    'api/global-variables',
   ],
 
   // But you can create a sidebar manually
