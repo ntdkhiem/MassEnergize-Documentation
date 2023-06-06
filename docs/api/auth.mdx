@@ -1,0 +1,30 @@
+---
+title: Auth
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Auth
+
+This page contains all actions related to authentication.
+
+## Routes
+
+### /auth.login
+
+This route is used to authenticate a user (works the same way as verifying). It looks for a Firebase ID token under `idToken`.
+
+### /auth.logout
+
+### /auth.verify, /auth.whoami, /auth.test
+This route is used to get the current user's information.
+
+### /auth.verifyCaptcha
+
+- Required: `captchaString`
+
+This route is used to verify a captcha string using Google reCaptcha.
+
+### /auth.signinasguest
+
+This route looks for `email` in the request arguments and signs in as a guest user.
