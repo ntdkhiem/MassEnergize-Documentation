@@ -1,0 +1,125 @@
+---
+title: Events
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Events
+
+This page contains all actions related to events.
+
+## Routes
+
+### /events.info
+
+- Required: `event_id:int`
+
+### /events.create
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `name:str`
+- Optional: `tags:list`, `is_global:bool`, `archive:bool`, `is_published:bool`, `is_recurring:bool`, `is_approved:bool`, `have_address:bool`, `location:location`, `rsvp_enabled:bool`, `rsvp_email:bool`, `image:str_list`, `publicity:str`, `publicity_selections:list`, `add_to_page:bool`
+
+### /events.add, /events.submit
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `name:str`
+- Optional: `tags:list`, `is_recurring:bool`, `have_address:bool`, `location:str`, `rsvp_enabled:bool`, `rsvp_email:bool`, `event_id:str`
+
+
+### /events.copy
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `event_id:int`
+
+### /events.list
+
+- Optional: `community_id:str`, `subdomain:str`, `user_id:str`
+:::note
+These arguments do not have proper type so I assume all are strings. [Link](https://github.com/massenergize/api/blob/bc7edbf97e653b5b7baad64f10add466b8995a51/src/api/handlers/event.py#LL260C5-L263C57)
+:::
+
+### /events.update
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `event_id:int`
+- Optional: `community_id:int`, `name:str`, `tags:list`, `is_global:bool`, `archive:bool`, `is_published:bool`, `is_recurring:bool`, `is_approved:bool`, `have_address:bool`, `location:location`, `rsvp_enabled:bool`, `rsvp_email:bool`, `image:str_list`, `publicity:str`, `publicity_selections:list`, `shared_to:str_list`, `upcoming_is_cancelled:bool`, `upcoming_is_rescheduled:bool`
+
+### /events.delete, /events.remove
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `event_id:int`
+
+### /events.rank
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `id:int`, `rank:int`
+:::note
+This route also takes in `event_id` but will rename it to `id`.
+:::
+
+### /events.rsvp.list
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `event_id:int`
+
+### /events.rsvp.get
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `event_id:int`
+
+### /events.rsvp.update
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `event_id:int`
+- Optional: `status:str`
+
+### /events.rsvp.remove
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `rsvp_id:int` or `event_id:int`
+
+### /events.todo
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `event_id:int`
+
+This route is used to save event to user's profile for later.
+
+### /events.exceptions.list
+
+This route is used to list recurring event exceptions.
+
+### /events.data.update
+
+This route is used to update recurring event date
+
+### /events.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:int`
+
+### /events.others.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `community_ids:str_list`
+- Optional: `exclude:bool`
+
+### /events.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+This route is used to list events for super admins.
