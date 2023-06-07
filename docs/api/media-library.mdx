@@ -1,0 +1,54 @@
+---
+title: Media Gallery
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Media Gallery
+
+This page contains all actions related to media gallery.
+
+## Routes
+
+### /gallery.fetch
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `community_ids:str_list`
+- Optional: `lower_limit:int`, `upper_limit:int`
+
+This route is used to fetch image content related to communities that admins can browse through.
+
+### /gallery.search
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `filters:str_list`, `target_communities:list`
+- Optional: `lower_limit:int`, `upper_limit:int`, `all_communities:bool`, any_community:bool`, `tags:str_list`
+
+This route is used to filter images and only retrieves content related to a scope (events, testimonials, actions, etc.) More search types to be added later when requested.
+
+### /gallery.add
+- Required: `user_id:str`, `file:file`
+- Optional: `community_ids:list`, `title:str`, `is_universal:bool`, `tags:str_list`, `size:str`, `size_text:str`, `description:str`
+:::caution
+This route __does not__ limit to **admins only**. [Link](https://github.com/massenergize/api/blob/bc7edbf97e653b5b7baad64f10add466b8995a51/src/api/handlers/media_library.py#L77)
+:::
+
+This route is used to enable admins to upload images that they can use later.
+
+### /gallery.remove
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `media_id:int`
+
+This route is used to delete a media file from the system.
+
+### /gallery.image.info
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `media_id:int`
+
+This route is used to retrieve information about an image file when given `media_id`.
