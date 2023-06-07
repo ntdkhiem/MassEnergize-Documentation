@@ -1,0 +1,78 @@
+---
+title: Goals
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Goals
+
+This page contains all actions related to goals.
+
+## Routes
+
+### /goals.info
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `goal_id:int`
+
+### /goals.create, /goals.add
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `team_id:int`, `community_id:int`, `user_id:int`
+:::note
+Assuming all of these arguments are type `int` because there is no specified type in any. [Link](https://github.com/massenergize/api/blob/bc7edbf97e653b5b7baad64f10add466b8995a51/src/api/handlers/goal.py#LL51C5-L53C40)
+:::
+
+### /goals.list
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `team_id:int`, `user_id:int`, (`community_id:int` or `subdomain:str`)
+:::note
+Assuming all of these arguments are type `int` because there is no specified type in any.
+:::
+
+### /goals.update
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /goals.delete, /goals.remove
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /goals.copy
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `goal_id:int`
+:::note
+Assuming all of these arguments are type `int` because there is no specified type in any.
+:::
+
+### /goals.increase
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `goal_id:int`, `field_name:str`
+
+This route is used to increase the value of the given field.
+
+### /goals.decrease
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `goal_id:int`, `field_name:str`
+
+This route is used to decrease the value of the given field.
+
+### /goals.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:int`
+
+### /goals.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>
