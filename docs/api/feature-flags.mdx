@@ -1,0 +1,43 @@
+---
+title: Feature Flags
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Feature Flags
+
+This page contains all actions related to feature flags.
+
+## Routes
+
+### /featureFlags.info
+
+- Required: `id:int`
+
+### /featureFlags.list
+
+This route is used to list all available feature flags.
+
+### /featureFlags.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+### /featureFlags.add
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `name:str`, `audience:str`, `user_audience:str`, key:str`
+- Optional: `expires_on:str`, `community_ids:str_list`, `notes:str`, `user_ids:str_list`, `owner:str`, `scope:str`
+
+### /featureFlags.update
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `id:int`
+- Optional: `community_ids:str_list`, `notes:str`, `user_ids:str_list`
+
+### /featureFlags.delete
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `id:int`
