@@ -36,6 +36,7 @@ const sidebars = {
       ]
     },
     'api/global-variables',
+    'api/database-models',
   ],
 
   // But you can create a sidebar manually
