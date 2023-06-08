@@ -1,0 +1,76 @@
+---
+title: Misc
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Miscellaneous
+
+This page contains all actions related to miscellaneous.
+
+## Routes
+
+### /menus.remake
+
+This route is used to update navigation menu from [`src/database/raw_data/portal/menu.json`](https://github.com/massenergize/api/blob/development/src/database/raw_data/portal/menu.json)
+
+### /menus.list
+
+### /data.backfill
+
+TODO: Confusing route. Backfill means update data with new data?
+
+### /data.carbonEquivalency.create
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+This route is used to create **CarbonEquivalency**
+
+### /data.carbonEquivalency.update
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `id:int`
+:::note
+Will rename to `id` if `carbon_equivalency_id` is passed in.
+:::
+
+This route is used to update **CarbonEquivalency**
+
+### /data.carbonEquivalency.get, /data.carbonEquivalency.info
+- Required: `id:int`
+:::note
+Will rename to `id` if `carbon_equivalency_id` is passed in.
+:::
+
+### /data.carbonEquivalency.delete
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `id:int`
+:::note
+Will rename to `id` if `carbon_equivalency_id` is passed in.
+:::
+
+### /home
+
+### /auth.login.testmode
+
+- Required: `passport_key:str`, `email:str`
+
+### /preferences.list, /settings.list
+
+This route is used to fetch available preferences for normal user, but it can fetch a subdomain's available preferences if the user is an admin and `subdomain:str` is in the list of arguments.
+
+### /what.happened
+
+<Highlight level={1}>Admins Only</Highlight>
+
+This route is used to fetch instances of **Footage** for either **Super Admins** or **Community Admins**.
+
+### /actions.report
+
+This route is used to download **Action** report from **Community** (for anyone?).
+:::caution
+This route has print statements in [`handlers/`](https://github.com/massenergize/api/blob/bc7edbf97e653b5b7baad64f10add466b8995a51/src/api/handlers/misc.py#LL76C9-L76C9) and [`stores/`](https://github.com/massenergize/api/blob/bc7edbf97e653b5b7baad64f10add466b8995a51/src/api/store/misc.py#L81).
+:::
