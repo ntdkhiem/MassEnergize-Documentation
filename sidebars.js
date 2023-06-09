@@ -34,6 +34,7 @@ const sidebars = {
         'api/messages',
         'api/misc',
         'api/policy',
+        'api/subscribers',
       ]
     },
     'api/global-variables',
