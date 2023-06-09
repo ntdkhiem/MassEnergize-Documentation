@@ -1,0 +1,90 @@
+---
+title: Teams
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Teams
+
+This page contains all actions related to [Team](database-models#team).
+
+## Routes
+
+### /teams.info
+
+- Required: `id:int`
+
+### /teams.create, /teams.add
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /teams.list
+
+### /teams.stats
+
+### /teams.update
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `id:int`
+
+### /teams.delete, /teams.remove
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `id:int`
+
+### /teams.join
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `id:int`, `user_id:int`
+
+### /teams.leave
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `id:int`
+
+### /teams.addMember
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `id:int`
+- `user_id:int`, `email:str`, `is_admin:bool`
+
+### /teams.removeMember
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `id:int`
+- `user_id:int`, `email:str`
+
+### /teams.messageAdmin, /teams.contactAdmin
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `title:str`
+
+### /teams.members
+
+<Highlight level={1}>Admins Only</Highlight>
+
+### /teams.members.preferredNames
+
+### /teams.actions.completed
+
+- Required: `team_id:int`
+:::caution
+This route looks for `team_id` instead of `id`.
+:::
+
+### /teams.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:int`, `team_ids:list`
+
+### /teams.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>

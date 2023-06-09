@@ -37,6 +37,7 @@ const sidebars = {
         'api/subscribers',
         'api/summary',
         'api/tag',
+        'api/team',
       ]
     },
     'api/global-variables',
