@@ -1,0 +1,55 @@
+---
+title: Policy
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Policy
+
+This page contains all actions related to policy.
+
+## Routes
+
+### /policies.info
+
+- Required: `policy_id:int`
+
+### /policies.create, /policies.add
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `community_id:int`
+- Optional: `is_global:bool`
+
+### /policies.copy
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `policy_id:int`
+
+### /policies.list
+
+This route is used to list all policies.
+
+### /policies.update
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `policy_id:int`
+- Optional: `is_global:bool`
+
+### /policies.delete, /policies.remove
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `policy_id:int`
+
+### /policies.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:int`
+
+### /policies.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>

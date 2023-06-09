@@ -33,6 +33,7 @@ const sidebars = {
         'api/media-library',
         'api/messages',
         'api/misc',
+        'api/policy',
       ]
     },
     'api/global-variables',
