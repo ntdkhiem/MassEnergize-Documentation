@@ -38,6 +38,7 @@ const sidebars = {
         'api/summary',
         'api/tag',
         'api/team',
+        'api/testimonial',
       ]
     },
     'api/global-variables',
