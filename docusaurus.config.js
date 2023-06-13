@@ -9,7 +9,7 @@ const config = {
   title: "MassEnergize's Documentation",
   tagline:
     "Learn how to use MassEnergize's platform to build your community's energy future",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.png",
 
   // Set the production url of your site here
   url: "https://your-docusaurus-test-site.com",
@@ -65,23 +65,22 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
         logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
+          alt: "MassEnergize Logo",
+          src: "img/logo.png",
         },
         items: [
           {
             type: "docSidebar",
             sidebarId: "docSidebar",
             position: "left",
-            label: "Docs",
+            label: "Guides",
           },
           {
             type: "docSidebar",
             sidebarId: "apiSidebar",
             position: "left",
-            label: "API Reference",
+            label: "Reference",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
