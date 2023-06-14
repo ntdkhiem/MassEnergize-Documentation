@@ -1,0 +1,60 @@
+---
+title: Subscribers
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Subscribers
+
+This page contains all actions related to subscribers.
+
+## Routes
+
+### /subscribers.info
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `subscriber_id:int`
+
+### /subscribers.create, /subscribers.add
+
+:::caution
+This route does not have `@admins_only`. [Link](https://github.com/massenergize/api/blob/2c7048060d29fd4491be8f1bc7c4e7c06515ba16/src/api/handlers/subscriber.py#L47)
+:::
+
+- Required: `community_id:int`, `name:str`, `email:str`
+
+### /subscribers.copy
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `subscriber_id:int`
+
+### /subscribers.list
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `community_id:int`, `user_id:int`
+
+### /subscribers.update
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `subscriber_id:int`
+- Optional: `is_global:bool`
+
+### /subscribers.delete, /subscribers.remove
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `subscriber_id:int`
+
+### /subscribers.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:int`
+
+### /subscribers.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>

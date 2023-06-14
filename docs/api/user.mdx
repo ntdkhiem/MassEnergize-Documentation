@@ -1,0 +1,55 @@
+---
+title: Users
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Users
+
+This page contains all actions related to [UserProfile()](database-models#userprofile).
+
+## Routes
+
+### /users.info
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /users.create, /users.add
+
+- Required: `email:str`, `full_name:str`, `preferred_name:str`, `accepts_terms_and_conditions:bool`
+- `is_vendor:bool`, `is_guest:bool`, `community_id:int`
+
+### /users.list
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `community_id:int`
+
+### /users.update
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /users.delete, /users.remove
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `user_id:int` or `id:int`
+
+### /users.actions.completed.add
+### /users.actions.todo.add
+### /users.actions.todo.list
+### /users.actions.completed.list
+### /users.actions.remove
+### /users.households.add
+### /users.households.edit
+### /users.households.remove
+### /users.households.list
+### /users.events.list
+### /users.checkImported
+### /users.listForPublicView (NOT USED)
+### /users.validate.username
+### /users.listForCommunityAdmin
+### /users.listForSuperAdmin
+### /users.import
+### /users.mou.accept
+### /users.get.visits

@@ -1,0 +1,59 @@
+---
+title: Messages
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Messages
+
+This page contains all actions related to messages.
+
+## Routes
+
+### /messages.info
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `message_id:int`
+:::note
+This route will rename `message_id` to `id`.
+:::
+
+### /messages.delete
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `message_id:int`
+:::note
+This route will rename `message_id` to `id`.
+:::
+
+### /messages.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `message_ids:list`
+
+### /messages.listForSuperAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+:::note
+This route has the same handler as [`/messages.listForCommunityAdmin`](#messageslistforcommunityadmin).
+:::
+
+### /messages.listTeamAdminMessages
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `message_ids:list`
+
+### /messages.replyFromCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+### /messages.forwardToTeamAdmins
+
+<Highlight level={1}>Admins Only</Highlight>
+
+

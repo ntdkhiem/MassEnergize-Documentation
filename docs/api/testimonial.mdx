@@ -1,0 +1,62 @@
+---
+title: Testimonials
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Testimonials
+
+This page contains all actions related to [Testimonial()](database-models#testimonial).
+
+## Routes
+
+### /testimonials.info
+
+- Required: `id:int`
+
+### /testimonials.create, /testimonials.add
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `title:str`
+- `community:int`, `action_id:int`, `vendor_id:int`, `tags:list`, `is_approved:bool`, `is_published:bool`, `community_id:int`, `image:str_list`
+
+### /testimonials.submit
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `title:str`
+- `community_id:int`, `action_id:int`, `vendor_id:int`
+
+### /testimonials.list
+
+### /testimonials.update
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `id:int`
+- `community_id:int`, `action_id:int`, `vendor_id:int`, `tags:list`, `is_approved:bool`, `is_published:bool`, `image:str_list`
+
+### /testimonials.delete, /testimonials.remove
+- `testimonial_id`
+:::caution
+This route looks for `testimonial_id` instead of `id`.
+:::
+
+### /testimonials.rank
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `id:int`, `rank:int`
+
+### /testimonials.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `testimonial_ids:list`
+
+### /testimonials.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Optional: `testimonial_ids:list`

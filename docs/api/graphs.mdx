@@ -1,0 +1,71 @@
+---
+title: Graphs
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Graphs
+
+This page contains all actions related to graphs.
+
+## Routes
+
+### /graphs.info
+
+- Required: `id:int`
+
+### /graphs.create, /graphs.add
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `community_id:int`, `action_id:int`, `vendor_id:int`
+
+### /graphs.list
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `community_id:str` or `subdomain:str`
+
+### /graphs.actions.completed
+
+- Required: `community_id:str` or `subdomain:str`
+
+### /graphs.actions.completed.byTeam
+
+- Optional: `team_id:str`
+
+### /graphs.communities.impact
+
+- Required: `community_id:str` or `subdomain:str`
+
+### /graphs.update, /graphs.data.update
+
+<Highlight level={1}>Admins Only</Highlight>
+
+### /graphs.delete, /graphs.remove
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `data_id:int`
+
+### /data.update
+
+<Highlight level={0}>Login Required</Highlight>
+
+TODO: Add fields.
+
+### /data.delete
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `data_id:int`
+
+### /graphs.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:int`
+
+### /graphs.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>

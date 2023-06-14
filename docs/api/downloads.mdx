@@ -1,0 +1,71 @@
+---
+title: Downloads
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Downloads
+
+This page contains all actions related to downloads.
+
+## Routes
+
+### /downloads.users
+
+<Highlight level={1}>Admins Only</Highlight>
+
+TODO: Unclear whether either argument is required or not. [link](https://github.com/massenergize/api/blob/bc7edbf97e653b5b7baad64f10add466b8995a51/src/api/handlers/download.py#LL31C5-L32C40)
+- Required: `community_id:str` or `team_id:str`
+
+This route is used to download all users from a community or team.
+
+### /downloads.actions
+
+<Highlight level={1}>Admins Only</Highlight>
+
+TODO: Unclear whether this argument is required or not.
+- Required: `community_id:str`
+
+This route is used to download all actions from a community
+
+### /downloads.communities
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+This route is used to download all communities.
+
+### /downloads.teams
+
+<Highlight level={1}>Admins Only</Highlight>
+
+TODO: Unclear whether this argument is required or not.
+- Required: `community_id:str`
+
+### /downloads.metrics
+
+<Highlight level={1}>Admins Only</Highlight>
+
+TODO: Unclear whether any of these arguments is required or not.
+- Required: `community_id:str`, `audience:str`, `community_ids:str_list`
+
+:::caution
+A concerning comment addressing the two routes below is found in [Github](https://github.com/massenergize/api/blob/bc7edbf97e653b5b7baad64f10add466b8995a51/src/api/services/download.py#LL71C4-L71C5).
+:::
+
+### /downloads.cadmin_report
+
+<Highlight level={1}>Admins Only</Highlight>
+
+-Required: `community_id:str`
+
+This route is used to send a copy of the nudge report to community admin's email.
+
+### /downloads.sadmin_report
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+This route is used to send a copy of the nudge report to super admin's email.
+
+### /downloads.sample.user_report
+
+This route is used to send a sample copy of the nudge report to anyone.

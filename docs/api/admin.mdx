@@ -1,0 +1,73 @@
+---
+title: Admin
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Admin
+
+This page contains all actions related to adminstrative tasks.
+
+## Routes
+
+### /admins.super.add
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `name:str`, `email:str`
+
+### /admins.super.remove
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Optional: `user_id:str`, `email:str`
+:::caution
+You must supply either `user_id` or `email`.
+:::
+
+### /admins.super.list
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+### /admins.community.add
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `name:str`, `email:str`
+- Optional: `community_id:str`, `subdomain:str`
+:::caution
+You must supply either `community_id` or `subdomain`.
+:::
+
+### /admins.community.remove
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `user_id:str`, `email:str`, `community_id:str`, `subdomain:str`
+:::caution
+You must supply either `community_id` or `subdomain`.
+:::
+
+### /admins.community.list
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:str`, `subdomain:str`
+:::caution
+You must supply either `community_id` or `subdomain`.
+:::
+
+### /admins.messages.add
+- Optional: `community_id:str`, `subdomain:str`
+:::caution
+You must supply either `community_id` or `subdomain`.
+:::
+
+### /admins.messages.list
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:str`, `subdomain:str`
+:::caution
+You must supply either `community_id` or `subdomain`.
+:::

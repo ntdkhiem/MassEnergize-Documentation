@@ -1,0 +1,78 @@
+---
+title: Communities
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Communities
+
+This page contains all routes related to the Communities resource.
+
+## Routes
+
+### /communities.info, /communities.graphs, /communities.data
+- Required: `community_id:int` or `subdomain:str`
+
+### /communities.create, /communities.add
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+TODO: Add more info. [Portal Admin](https://github.com/massenergize/frontend-admin/blob/c3aec9103b23677c013b42a2fb0cc026aef51bef/app/containers/MassEnergizeSuperAdmin/Community/AllCommunities.js#LL35C13-L35C13), [API](https://github.com/massenergize/api/blob/bc7edbf97e653b5b7baad64f10add466b8995a51/src/api/handlers/community.py#L108)
+
+### /communities.list
+
+This route is used to list active communities.
+
+### /communities.update
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `community_id:int`
+
+Refer to [Community()](global-variables#community) for the full list of fields that can be updated.
+
+### /communities.delete, /communities.remove
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `id:int`
+
+### /communities.join
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `community_id:int`
+
+This route is used to add the current user to the specified community.
+
+### /communities.leave
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `community_id:int`
+
+This route is used to remove the current user in the specified community, if existed.
+
+### /communities.custom.website.add
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `website:str`, (`subdomain:str` or `community_id:int`)
+
+### /communities.actions.completed
+
+- Optional: `community_id:int`, `subdomain:str`, `communities:str_list`, `actions:str_list`, `time_range:str`, `end_data:str`, `start_date:str`
+
+This route is used to list actions completed by members of a community or team. Include any actions which are DONE or TODO (so not really completed).
+
+### /communities.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+### /communities.others.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+### /communities.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>

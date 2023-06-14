@@ -1,0 +1,53 @@
+---
+title: Device Profile
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Device Profile
+
+This page contains all routes related to device profile.
+
+## Routes
+
+### /device.info
+- Required: `id:str`
+:::note
+This route also takes in either `device_id` or `device_profile_id` but will rename them back to `id`.
+:::
+
+### /device.create, /device.add, /device.log
+- Required: `id:str`, `community_id:int`
+:::note
+This route also takes in either `device_id` or `device_profile_id` but will rename them back to `id`.
+:::
+
+### /device.pmetrics
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `metric:str`
+- Optional: `community_id:str`
+
+This route is used to retrieve platform's metrics.
+
+### /device.cmetrics
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `metric:str`, `community_id:str`
+
+This route is used to retrieve community's metrics.
+
+### /device.update
+- Required: `id:str`
+:::note
+This route also takes in either `device_id` or `device_profile_id` but will rename them back to `id`.
+:::
+
+### /device.delete, /device.remove
+- Required: `id:str`
+:::note
+This route also takes in either `device_id` or `device_profile_id` but will rename them back to `id`.
+:::
+

@@ -1,0 +1,39 @@
+---
+title: Summary
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Summary
+
+This page contains all actions related to summary.
+
+## Routes
+
+### /summary.next.steps.forAdmins
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `is_community_admin:bool`, `email:str`
+
+### /summary.get.engagements
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `is_community_admin:bool`, `email:str`
+:::info
+From 05/15/2023, the variables above are no longer used for security reasons.
+:::
+
+- Optional: `time_range:str`, `start_time:str`, `end_time:str`, `communities:str_list`
+
+### /summary.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:int`
+
+### /summary.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>
+

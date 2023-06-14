@@ -1,0 +1,47 @@
+---
+title: Tags
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Tags
+
+This page contains all actions related to tags.
+
+## Routes
+
+### /tags.info
+
+- `args` itself is tag's ID.
+
+### /tags.create, /tags.add
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+This route is used to create [Tag()](database-models#tag).
+
+### /tags.list
+
+- Required: `community_id:int`, `user_id:int`
+
+### /tags.update
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `id:int`
+
+### /tags.delete, /tags.remove
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Required: `id:int`
+
+### /tags.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:int`
+
+### /tags.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>
