@@ -18,7 +18,7 @@ This command starts a local development server and opens up a browser window. Mo
 
 ### How to Edit
 
-Here is a list of guides on how to make changes in Docusaurus.
+Here is a [list of guides](https://docusaurus.io/docs/category/guides) on how to make changes in Docusaurus.
 
 Essentially, the documentation lives in `docs/`.
 
