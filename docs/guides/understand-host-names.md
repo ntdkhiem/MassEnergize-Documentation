@@ -49,3 +49,17 @@ Notice the difference in the subdomain of the domain names.
 ### API
 
 `https://communities.massenergize.org`
+
+## Dev
+
+:::caution
+This stage has not been used before during development process.
+:::
+
+### Community Portal
+
+`https://community.massenergize.dev`
+
+### API
+
+`https://communities.massenergize.dev`
