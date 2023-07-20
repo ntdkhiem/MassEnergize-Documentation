@@ -2,7 +2,7 @@
 title: Communities
 ---
 
-import Highlight from '@site/src/components/Highlight';
+import Highlight from "@site/src/components/Highlight";
 
 # Communities
 
@@ -11,6 +11,7 @@ This page contains all routes related to the Communities resource.
 ## Routes
 
 ### /communities.info, /communities.graphs, /communities.data
+
 - Required: `community_id:int` or `subdomain:str`
 
 ### /communities.create, /communities.add
@@ -21,7 +22,9 @@ TODO: Add more info. [Portal Admin](https://github.com/massenergize/frontend-adm
 
 ### /communities.list
 
-This route is used to list active communities.
+- Optional: `zipcode:str`, `max_distance:int`
+
+This route is used to list active communities. With optional arguments, it will filter active communities based on how far away from the given `zipcode`
 
 ### /communities.update
 
