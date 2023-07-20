@@ -4,9 +4,11 @@ MassEnergize's development workflow has three stages:
 
 1. **Local**: This is where developers will spend most of the time making changes, fixing bugs, and adding new features.
 
-2. **Canary** (aka staging): This is a replica of the production site where new changes are being tested before pushing to production.
+2. **Dev**: Similar to local but instead of running database and API locally, they are available on the cloud.
 
-3. **Production**: This is an actual version that users and admins will see.
+3. **Canary** (aka staging): This is a replica of the production site where new changes are being tested before pushing to production.
+
+4. **Production**: This is an actual version that users and admins will see.
 
 :::note
 There is an extra stage called **Dev** but there is no used to it for the moment.
@@ -51,10 +53,6 @@ Notice the difference in the subdomain of the domain names.
 `https://communities.massenergize.org`
 
 ## Dev
-
-:::caution
-This stage has not been used before during development process.
-:::
 
 ### Community Portal
 

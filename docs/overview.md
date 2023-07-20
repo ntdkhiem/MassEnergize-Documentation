@@ -10,10 +10,14 @@ Should include:
 - common response
 - all errors
 - techstack: react, django, firebase, postgresql, celery
-    - could make a diagram of the architecture
-    - could make a diagram of database's relationships.
-- how to contribute
+  - could make a diagram of the architecture
+  - could make a diagram of database's relationships.
 - testing status
 - development workflow (plan, develop, test, deploy)
 - [how to auto-generate documentation in Django's admin](https://docs.djangoproject.com/en/4.2/ref/contrib/admin/admindocs/)
 - style guide?
+- Mobile app development workflow
+
+### How to Contribute
+
+[Follow This Guide](https://github.com/massenergize/Documentation/blob/master/contributing.md)
