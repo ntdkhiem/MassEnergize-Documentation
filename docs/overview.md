@@ -6,13 +6,14 @@ sidebar_position: 1
 
 Should include:
 
-- development workflow (plan, develop, test, deploy)
-- [how to auto-generate documentation in Django's admin](https://docs.djangoproject.com/en/4.2/ref/contrib/admin/admindocs/)
+- Development workflow (plan, develop, test, deploy)
+- [How to auto-generate documentation in Django's admin](https://docs.djangoproject.com/en/4.2/ref/contrib/admin/admindocs/)
 - Mobile app development workflow
 
 ### Architecture Diagram
 
 ![Diagram](../static/img/architecture-diagram.png)
+[Edit in Figma](https://www.figma.com/file/4NhuZMoYSxUy9QY9xpDcqq/ME's-Diagrams?type=whiteboard&node-id=0%3A1&t=M48sYMgnNE7fuwx6-1)
 
 ### Understand User Roles
 
