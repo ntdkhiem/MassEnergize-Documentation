@@ -1,0 +1,115 @@
+---
+title: Vendors
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# Vendors
+
+This page contains all routes related to general actions for vendors.
+
+## Routes
+
+### /vendors.info
+
+- Required: `vendor_id:int` or `id:int`
+
+### /vendors.create
+
+<Highlight level={1}>Admins Only</Highlight>
+
+Expect:
+- `key_contact_name:str`
+- `key_contact_email:str`
+- `onborading_contact_email:str`
+- `name:str`
+- `email:str`
+- `phone_number:str`
+- `have_address:bool`
+- `is_verified:bool`
+- `website:str`
+- `is_published:bool`
+- `is_approved:bool`
+- `communities:listt`
+- `service_area_states:str_list`
+- `properties_services:str_list`
+- `image:str_list`
+- `tags:list`
+- `location:location`
+
+### /vendors.add, /vendors.submit
+
+:::note
+This route serves two purposes. Each purpose also has its own endpoint.
+:::
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Optional: `vendor_id:int`
+
+Expect:
+- `key_contact_name:str`
+- `key_contact_email:str`
+- `onborading_contact_email:str`
+- `name:str`
+- `email:str`
+- `phone_number:str`
+- `have_address:bool`
+- `is_verified:bool`
+- `website:str`
+- `is_published:bool`
+- `is_approved:bool`
+- `communities:listt`
+- `service_area_states:str_list`
+- `properties_services:str_list`
+- `image:str_list`
+- `tags:list`
+- `location:location`
+
+This route is used to update existing vendor or create a new one if `vendor_id` doesn't exist in the database.
+
+### /vendors.list
+### /vendors.update
+
+<Highlight level={0}>Login Required</Highlight>
+
+Expect:
+- `vendor_id:int`
+- `key_contact_name:str`
+- `key_contact_email:str`
+- `onborading_contact_email:str`
+- `name:str`
+- `email:str`
+- `phone_number:str`
+- `have_address:bool`
+- `is_verified:bool`
+- `website:str`
+- `is_published:bool`
+- `is_approved:bool`
+- `communities:listt`
+- `service_area_states:str_list`
+- `properties_services:str_list`
+- `image:str_list`
+- `tags:list`
+- `location:location`
+### /vendors.copy
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `vendor_id:int`
+
+### /vendors.delete, /vendors.remove
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `vendor_id:int` or `id:int`
+
+### /vendors.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `community_id:int`
+
+### /vendors.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>

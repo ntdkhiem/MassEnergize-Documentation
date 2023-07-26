@@ -40,6 +40,7 @@ const sidebars = {
         "api/team",
         "api/testimonial",
         "api/user-profile",
+        "api/vendors",
       ],
     },
     "api/global-variables",
