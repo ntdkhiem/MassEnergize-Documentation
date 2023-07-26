@@ -1,0 +1,141 @@
+---
+title: User Profile
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+# User Profile
+
+This page contains all routes related to general actions for user's profile.
+
+## Routes
+
+### /users.info
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /users.create, /users.add
+
+- Required: `accepts_terms_and_conditions:bool`, `email:str`, `full_name:str`, `preferred_name:str`
+- Optional: `community_id:int`, `is_vendor:bool`, `is_guest:bool`
+
+### /users.list
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `community_id:int`
+
+### /users.update
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Optional: `id:str`
+
+### /users.delete, /users.remove
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `id:str` or `user_id:str`
+
+### /users.actions.completed.add
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `action_id:int`
+- Optional: `household_id:int`, `date_completed:date`
+
+### /users.actions.todo.add
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `action_id:int`
+- Optional: `household_id:int`, `date_completed:date`
+
+### /users.actions.todo.list
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /users.actions.completed.list
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /users.actions.remove
+
+<Highlight level={0}>Login Required</Highlight>
+
+- Required: `user_action_id:int` or `id:int`
+
+### /users.households.add
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /users.households.edit
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /users.households.remove
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /users.households.list
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /users.events.list
+
+<Highlight level={0}>Login Required</Highlight>
+
+### /users.checkImported
+
+- Required: `email:str`
+
+### /users.listForPublicView
+
+:::warning
+The endpoint is not in used.
+:::
+
+- Required: `community_id:int`
+- Optional: `min_points:int`
+
+### /users.validate.username
+
+- Required: `username:str`
+
+### /users.listForCommunityAdmin
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Optional: `user_emails:str_list`
+
+### /users.listForSuperAdmin
+
+<Highlight level={1}>Super Admins Only</Highlight>
+
+- Optional: `user_emails:str_list`, `community_ids:str_list`
+
+### /users.import
+
+<Highlight level={1}>Admins Only</Highlight>
+
+if `csv` argument is given:
+- Required: `community_id:int`, `csv:file`, `first_name_field:str`, `last_name_field:str`, `email_field:str`
+- Optional: `team_id:int`
+
+else:
+- Required: `community_id:int`, `names:str_list`, `first_names:str_list`, `last_names:str_list`, `emails:str_list`
+- Optional: `team_id:int`
+
+This route is used to import users from either CSV file or given list.
+
+### /users.mou.accept
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `accept:bool`, `policy_key:str`
+
+### /users.get.visits
+
+<Highlight level={1}>Admins Only</Highlight>
+
+- Required: `id:str`

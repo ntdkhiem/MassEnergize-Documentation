@@ -39,6 +39,7 @@ const sidebars = {
         "api/tag",
         "api/team",
         "api/testimonial",
+        "api/user-profile",
       ],
     },
     "api/global-variables",
