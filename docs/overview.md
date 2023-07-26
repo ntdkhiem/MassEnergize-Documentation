@@ -6,12 +6,13 @@ sidebar_position: 1
 
 Should include:
 
-- techstack: react, django, firebase, postgresql, celery, sentry, google analysis
-  - could make a diagram of the architecture
-  - could make a diagram of database's relationships.
 - development workflow (plan, develop, test, deploy)
 - [how to auto-generate documentation in Django's admin](https://docs.djangoproject.com/en/4.2/ref/contrib/admin/admindocs/)
 - Mobile app development workflow
+
+### Architecture Diagram
+
+![Diagram](../static/img/architecture-diagram.png)
 
 ### Understand User Roles
 
@@ -25,6 +26,4 @@ Should include:
 
 ### [MassEnergize's Project Board](https://github.com/orgs/massenergize/projects/7)
 
-### How to Contribute
-
-[Follow This Guide](https://github.com/massenergize/Documentation/blob/master/contributing.md)
+### [How to Contribute](https://github.com/massenergize/Documentation/blob/master/contributing.md)
