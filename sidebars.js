@@ -47,7 +47,7 @@ const sidebars = {
     "api/database-models",
   ],
 
-  docSidebar: ["overview", "guides/understand-host-names", "guides/testing"],
+  docSidebar: ["overview", "docs/understand-host-names", "docs/testing"],
 };
 
 module.exports = sidebars;
